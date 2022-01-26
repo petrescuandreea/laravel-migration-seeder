@@ -21,7 +21,7 @@ class CreateArtistsTable extends Migration
             $table -> string('surname', 60);
             $table -> string('stagename') -> nullable();
             $table -> date('date_of_birth');
-            $table -> string('genre', 20);
+            $table -> string('genre', 40);
             $table -> string('website') -> nullable();
             $table -> string('record_label', 60);
             $table -> text('bio') -> nullable();
