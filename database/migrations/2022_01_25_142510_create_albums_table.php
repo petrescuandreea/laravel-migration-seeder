@@ -17,11 +17,13 @@ class CreateAlbumsTable extends Migration
 
             $table -> id();
 
-            $table -> string('title');
+            $table -> string('title', 60);
             $table -> date('date_of_release');
-            $table -> tinyInteger('tracks');
-            $table -> string('produced_by');
-            $table -> tinyInteger('n_discs');
+            $table -> string('produced_by', 60);
+            $table -> bigInteger('views') -> unsigned() -> default(0);
+            $table -> bigInteger('sales') -> unsigned() -> default(0);
+            $table -> string('cover') -> nullable();
+
             $table -> timestamps();
         });
     }

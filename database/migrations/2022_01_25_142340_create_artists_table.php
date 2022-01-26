@@ -17,14 +17,14 @@ class CreateArtistsTable extends Migration
 
             $table -> id();
 
-            $table -> string('name');
-            $table -> string('surname');
+            $table -> string('name', 60);
+            $table -> string('surname', 60);
+            $table -> string('stagename') -> nullable();
             $table -> date('date_of_birth');
-            $table -> string('place_of_birth') -> nullable();
-            $table -> string('genre');
-            $table -> integer('n_albums') -> nullable();
-            $table -> string('website');
-            $table -> text('more_information') -> nullable();
+            $table -> string('genre', 20);
+            $table -> string('website') -> nullable();
+            $table -> string('record_label', 60);
+            $table -> text('bio') -> nullable();
 
             $table -> timestamps();
         });
